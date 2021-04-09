@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated SVG</title>
+    <style>
+      :root {
+        background-color: #639;
+        --purple: #9b51e0;
+        --blue: #56ccf2;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      svg {
+        cursor: pointer;
+      }
+
+      #purpleGroup {
+        fill: var(--purple);
+      }
+      #blueGroup {
+        fill: var(--blue);
+      }
+
+      #purple1,
+      #purple2,
+      #blue1 {
+        transition: all 0.5s ease;
+      }
+
+      #purple2 {
+        transform: translateX(-100%);
+      }
+
+      svg:hover #blue1 {
+        transform: translateX(20%);
+      }
+      svg:hover #purple1 {
+        transform: translateX(40%);
+        opacity: 0;
+      }
+      svg:hover #purple2 {
+        transform: translateX(0%);
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      width="480"
+      height="400"
+      viewBox="0 0 120 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="triangles" clip-path="url(#clip0)">
+        <g id="purpleGroup">
+          <path
+            id="purple1"
+            opacity="0.75"
+            d="M77.5 45.6699C80.8333 47.5944 80.8333 52.4056 77.5 54.3301L43 74.2487C39.6667 76.1732 35.5 73.7676 35.5 69.9186L35.5 30.0814C35.5 26.2324 39.6667 23.8268 43 25.7513L77.5 45.6699Z"
+          />
+          <path
+            id="purple2"
+            opacity="0.75"
+            d="M56.5 45.6699C59.8333 47.5944 59.8333 52.4056 56.5 54.3301L22 74.2487C18.6667 76.1732 14.5 73.7676 14.5 69.9186L14.5 30.0814C14.5 26.2324 18.6667 23.8268 22 25.7513L56.5 45.6699Z"
+          />
+        </g>
+        <g id="blueGroup">
+          <path
+            id="blue1"
+            opacity="0.75"
+            d="M56.5 45.6699C59.8333 47.5944 59.8333 52.4056 56.5 54.3301L22 74.2487C18.6667 76.1732 14.5 73.7676 14.5 69.9186L14.5 30.0814C14.5 26.2324 18.6667 23.8268 22 25.7513L56.5 45.6699Z"
+          />
+        </g>
+      </g>
+      <defs>
+        <clipPath id="clip0">
+          <rect width="120" height="100" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  </body>
+</html>
